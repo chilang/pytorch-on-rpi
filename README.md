@@ -84,7 +84,16 @@ $ chmod +x ./install_opencv_rpi
 $ ./install_opencv_rpi
 ```
 
+```
+cd /usr/local/python/cv2/python-3.7 
+sudo ln -s cv2.cpython-37m-arm-linux-gnueabihf.so cv2.so
+
+echo 'export PYTHONPATH="${PYTHONPATH}:/usr/local/python"' >> ~/.bash_profile
+source ~/.bash_profile
+```
+
 At the end of this process you will have installed Pytorch version 1.1.0, Torchvision 0.3.0 and Opencv v4. Normally, if you choose to build and install each library manually, this process could be extended for days. With this tutorial, in less than a day you can have them all installed. We are still working on an opencv .whl file to make installation even easier.
+
 
 To test if everything was installed correctly, log into your python terminal and run the commands:
 
